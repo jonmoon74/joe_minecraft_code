@@ -25,20 +25,20 @@ def buildBridge(bridgeLength, material):
         while i < iFive:
             #set a block in front of Steve
             mc.setBlock(x+i, y, z+iTwo, material)
-            iTwo++
+            iTwo += 1
             mc.setBlock(x+i, y, z+iTwo, material)
-            i++
+            i += 1
         #build the middle of the bridge   
         mc.setBlock(x+iFive, y, z+iFour, material)
-        iFour--
+        iFour -= 1
         mc.setBlock(x+iFive, y, z+iFour, material)
-        iFive++
+        iFive += 1
         #build the descending half of the bridge
         while iFive < bridgeLength:
             mc.setBlock(x+iFive, y, z+iFour, material)
-            iFour--
+            iFour -= 1
             mc.setBlock(x+iFive, y, z+iFour, material)
-            iFive++
+            iFive += 1
         #build the final step down   
         mc.setBlock(x+bridgeLength, y, z, material)
     else:
